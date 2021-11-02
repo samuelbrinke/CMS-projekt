@@ -1,0 +1,129 @@
+@import url('http://fonts.cdnfonts.com/css/streamster');
+
+body {
+  background-color: #191231;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.logo {
+  text-align: center;
+  position: relative;
+}
+.sun-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#sun 
+{
+  margin: 0;
+  width: 300px;
+  /* position: absolute;
+  top: 200px;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);  */
+}
+
+.line {
+  position: absolute;
+  bottom: 72px;
+  width: 70%;
+  border-bottom: 2px solid white;
+  border-image: linear-gradient(to left, #191231 1%, rgb(255, 255, 255) 50%, #191231 100%) 
+                100% 0 100% 0/3px 0 3px 0 stretch;
+    background: #fff;
+
+}
+.line2 {
+  position: absolute;
+  bottom: 72px;
+  width: 50%;
+  box-shadow:
+  0 0 8px #fff,
+  0 0 16px #fff,
+  0 0 24px #af62ff,
+  0 0 32px #af62ff;
+  
+filter: blur(1px);
+  border-bottom: 2px solid white;
+}
+
+#neon {
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  padding: 35px;
+
+  -ms-transform: translate(-50%, -50%) rotate(-8deg);
+  transform: translate(-50%, -50%) rotate(-8deg);
+
+  font-family: 'Streamster';
+  font-size: 5rem;
+  color: white;
+  /* background: -webkit-linear-gradient(#000000 0%,#113e87 22%,#10cccc 50%,#000000 51%,#e21ddc 78%,#e21ddc 78%,#ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter:drop-shadow(0 0 0.125em #fff) drop-shadow(0 0 0.165em #8e177c) drop-shadow(0 0 0.20em #8e177c); */
+  text-shadow:
+  0 0 0.08em #fff,
+  0 0 0.25em #fff,
+  0 0 0.33em #f80022,
+  0 0 0.415em #f80022;
+}
+span:nth-child(1){
+  animation: neon 3s  alternate ;
+}
+span:nth-child(2){
+  animation: neon 3s  alternate-reverse;
+}
+
+@keyframes neon {
+  0%, 13% {
+    text-shadow: none;
+  }
+  14%, 17%{
+    text-shadow:
+    0 0 0.08em #fff,
+    0 0 0.25em #fff,
+    0 0 0.33em #f80022,
+    0 0 0.415em #f80022;
+  }
+  18%, 48%{
+    text-shadow: none;
+  }
+  49%, 52%{
+    text-shadow:
+    0 0 0.08em #fff,
+    0 0 0.25em #fff,
+    0 0 0.33em #f80022,
+    0 0 0.415em #f80022;
+  }
+  53%, 98%{
+    text-shadow: none;
+  }
+  99%{
+    text-shadow: none;
+  }
+  100%{
+    text-shadow:
+    0 0 0.08em #fff,
+    0 0 0.25em #fff,
+    0 0 0.33em #f80022,
+    0 0 0.415em #f80022;
+  }
+}
+/* @keyframes neon{
+  0%, 18%, 22%, 26%, 58%, 62%, 100%{
+      text-shadow:
+      0 0 0.08em #fff,
+      0 0 0.25em #fff,
+      0 0 0.33em #f80022,
+      0 0 0.415em #f80022;
+  }
+  20%, 24%, 60%{        
+      text-shadow: none;
+  } 
+}*/
