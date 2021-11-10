@@ -16,7 +16,7 @@ function ProjectItem({project}) {
         }
 
         fetchData()
-    },[])
+    },[githublink, featured_media])
     return (
         <div>
             <h2>{project.title.rendered}</h2>

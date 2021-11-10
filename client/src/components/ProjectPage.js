@@ -11,14 +11,14 @@ function ProjectPage() {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await axios.get(`http://localhost:80d/wp-projekt/wp-json/wp/v2/projects/${params.id}`)
+      const res = await axios.get(`http://localhost:80/wp-projekt/wp-json/wp/v2/projects/${params.id}`)
       const done = await res.data;
       setBook(done)
       setIsload(true)
     }
 
     fetchData()
-  }, [] )
+  }, [params] )
 
   return (
     <div>
