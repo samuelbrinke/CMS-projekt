@@ -15,12 +15,15 @@ function Header() {
         <div className="mountain moun1"></div>
         <div className="mountain moun2"></div>
         <div className="mountain moun3"></div>
-        <div id="neon">
-          <span>Samuel</span><span>Brinkebäck</span>
-        </div>
-      </div>
-      <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
+        <a href="/">
+          <div id="logo-text"><span>Samuel</span><span>Brinkebäck</span></div>
+        </a>
+        <button className="menu-btn d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+          <i className="bi bi-list"></i>
+          <span className="" style={{'fontSize': '1rem', 'marginLeft': '5px' }}>Menu</span>
+        </button>
 
+      </div>
     </header>
   )
 }

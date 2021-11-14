@@ -4,6 +4,8 @@ import ProjectPage from './components/ProjectPage';
 import Projects from './components/Projects'
 import Header from './components/Header';
 import MenuDrawer from './components/MenuDrawer';
+import About from './components/About';
+import Home from './components/Home';
 
 function App() {
 
@@ -13,8 +15,10 @@ function App() {
       <MenuDrawer />
       <Router>
           <Routes>
-            <Route exact path="/" element={<Projects />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/project/:id" element={<ProjectPage />} />
+            <Route path="/about" element={<About />} />
           </Routes>
       </Router>
     </div>

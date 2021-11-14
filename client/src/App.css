@@ -5,11 +5,23 @@ body {
   font-size: 1rem;
   margin: 0;
   color: white;
-}
-
-.main {
   background-image:linear-gradient(to bottom, hsla(47deg, 98%, 95%, .05) 1px, transparent 1px);
   background-size: 1px 7px;
+}
+
+a, h1, h2, h3, h4, h5 {
+  text-decoration: none;
+  color: white;
+  text-shadow:
+  0 0 0.08em #fff,
+  0 0 0.25em #fff,
+  0.05em 0 0 rgba(255, 0, 0, 0.75),
+  -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+  0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+}
+
+a:hover {
+  color: unset;
 }
 
 .logo {
@@ -22,11 +34,7 @@ header{
 }
 
 .header-nav{
-
   background: linear-gradient( #191231 0%, #45125e80 40%, #911a9180 80%, #c30cc380 100% );
-  box-shadow:
-  0 0 100px purple,
-  0 0 200px purple;
 }
 .stars{
   width: 1px;
@@ -90,7 +98,6 @@ header{
   bottom: 0;
   width: 100%;
   border-bottom: 3px solid white;
-  /* border-image: linear-gradient(to left, #191231 1%, rgb(255, 255, 255) 50%, #191231 100%) 100% 0 100% 0/3px 0 3px 0 stretch; */
   border-image: linear-gradient(to left, #191231 1%, rgb(255, 255, 255) 15%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 85%, #191231 100%) 100% 0 100% 0/3px 0 3px 0 stretch;
   background: #fff;
 }
@@ -112,7 +119,7 @@ header{
   border-bottom: 3px solid white;
 }
 
-#neon {
+#logo-text {
   position: absolute;
   z-index: 5;
   top: 83%;
@@ -125,32 +132,13 @@ header{
   font-family: 'Streamster';
   font-size: 5rem;
   color: white;
-  /* background: -webkit-linear-gradient(#000000 0%,#113e87 22%,#10cccc 50%,#000000 51%,#e21ddc 78%,#e21ddc 78%,#ffffff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter:drop-shadow(0 0 0.125em #fff) drop-shadow(0 0 0.165em #8e177c) drop-shadow(0 0 0.20em #8e177c); */
   text-shadow:
   0 0 0.08em #fff,
   0 0 0.25em #fff,
   0.05em 0 0 rgba(255, 0, 0, 0.75),
   -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
   0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-  /* text-shadow:
-  0 0 4px #fff,
-  0 0 11px #fff,
-  0 0 19px #fff,
-  0 0 40px #f09,
-  0 0 80px #f09,
-  0 0 90px #f09,
-  0 0 100px #f09,
-  0 0 150px #f09; */
 }
-/* span:nth-child(1){
-  animation: neon 3s  alternate ;
-}
-span:nth-child(2){
-  animation: neon 3s  alternate-reverse;
-} */
 
 @keyframes neon {
   0%, 13% {
@@ -187,18 +175,6 @@ span:nth-child(2){
     0 0 0.415em #ff00dd;
   }
 }
-/* @keyframes neon{
-  0%, 18%, 22%, 26%, 58%, 62%, 100%{
-      text-shadow:
-      0 0 0.08em #fff,
-      0 0 0.25em #fff,
-      0 0 0.33em #f80022,
-      0 0 0.415em #f80022;
-  }
-  20%, 24%, 60%{        
-      text-shadow: none;
-  } 
-}*/
 
 .mountain{
   background: linear-gradient(
@@ -214,19 +190,104 @@ span:nth-child(2){
   width: 350px;
   height: 80px;
   left: 26%;
-  /* inset: auto auto 24% 15%; */
 }
 .moun2{
   width: 400px;
   height: 70px;
   left: 50%;
   transform: translate(-50%, 0);
-  /* inset: auto auto 24% 31%; */
 }
 .moun3{
   width: 350px;
   max-width: 400px;
   height: 120px;
   right: 26%;
-  /* inset: auto auto 24% 52%; */
+}
+
+.menu-btn {
+  background-color: unset;
+  border: none;
+  color: white;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  font-size: 30px;
+  text-shadow: 0 0 0.08em #fff, 0 0 0.25em #fff, 0.05em 0 0 rgb(255 0 0 / 75%), -0.025em -0.05em 0 rgb(0 255 0 / 75%), 0.025em 0.05em 0 rgb(0 0 255 / 75%);
+}
+
+.offcanvas-body a {
+  color: white;
+  text-decoration: none;
+  text-shadow:
+  0 0 0.08em #fff,
+  0 0 0.25em #fff,
+  0.05em 0 0 rgba(255, 0, 0, 0.75),
+  -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+  0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+}
+
+.lines-bg {
+  position: relative;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+  opacity: 0.3;
+}
+.lines-bg img {
+  object-fit: fill;
+  height: calc(100vh - 270px);
+  width: 100%;
+  filter: grayscale(100%);
+}
+.bg-layer {
+  background: rgb(25,18,49);
+  background: linear-gradient(0deg, rgba(25,18,49,1) 0%, rgba(25, 18, 49, 0) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.links {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.project {
+  position: relative;
+  margin: 50px 0;
+}
+
+.project-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.content {
+  display: flex;
+}
+
+.content a,
+.content span {
+  text-decoration: none;
+  color: white;
+  text-shadow:
+  0 0 0.08em #fff,
+  0 0 0.25em #fff,
+  0.05em 0 0 rgba(255, 0, 0, 0.75),
+  -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+  0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+}
+
+.content div span {
+  margin: 0 10px;
+  font-size: 17px;
+}
+
+.content div:last-child span {
+  opacity: 0;
 }
