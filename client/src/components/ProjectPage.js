@@ -28,7 +28,7 @@ function ProjectPage() {
           <div>
             <h1>{project.title.rendered}</h1>
             <div dangerouslySetInnerHTML={{__html: project.content.rendered}} />
-            <a href={project.acf.github_link} className="d-block">Go to page</a>
+            <a href={project.acf.link} className="d-block">{project.acf.link_text}</a>
             <Link to={'/projects'}>Go back</Link>
           </div>
         ) : (
